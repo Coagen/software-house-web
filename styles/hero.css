@@ -1,0 +1,549 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+/* .....................................Global Style.................................. */
+/* Hero Section */
+.hero {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background: url("./../public/herobg.jpg") no-repeat center center/cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9); /* dark overlay */
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  color: #fff;
+  padding: 7rem;
+}
+.heroText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.heroHeading {
+  font-size: 6rem;
+}
+.heroHeadingFocus {
+  font-size: 7rem;
+  color: rgb(194, 5, 5);
+}
+.heroInfo {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+.heroButtonDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.heroButtonConnect {
+  padding: 1.2rem 4rem;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: rgb(194, 5, 5);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.heroButtonConnect:hover {
+  color: rgb(194, 5, 5);
+  background: #c9c4c4;
+  transform: scale(1.05);
+}
+.heroButtonExplore {
+  padding: 1.2rem 4rem;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: rgb(5, 5, 61);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.heroButtonExplore:hover {
+  color: rgb(5, 5, 61);
+  background: #c9c4c4;
+  transform: scale(1.05);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: -150px; /* hidden initially */
+  left: 0;
+  width: 100%;
+  /* background: rgba(0, 0, 0, 0.6); */
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: top 0.4s ease-in-out;
+  z-index: 10;
+  /* Blur Effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+}
+
+.menuList {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.logo {
+  width: 110px;
+  height: 110px;
+}
+.menuLink {
+  font-size: 1.8rem;
+  color: rgb(194, 5, 5);
+  text-decoration: none;
+  transition: 0.3s;
+}
+.menuLink:hover {
+  color: rgba(194, 5, 5, 0.425);
+}
+
+/* ........................................................................... */
+/* Second Section Grid */
+.second-section {
+  position: relative;
+  width: 100%;
+  /* height: 85vh; */
+  height: 100vh; /* THIS IS TRY*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  z-index: 1;
+  /* background: #111; */
+  background: #fff;
+  margin-top: 100vh; /* pushes it below hero */
+}
+
+/* Text Side */
+.text-side {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-direction: column;
+  padding: 0 7rem;
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: all 0.8s ease-in-out;
+}
+.sectionHeading {
+  font-size: 3rem;
+  /* color: #fff; */
+  color: #000;
+  text-align: center;
+}
+.sectionHeadingFocus {
+  font-size: 5rem;
+  color: rgb(194, 5, 5);
+}
+.sectionHeadingSubText {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.5;
+  /* color: #fff; */
+  color: #000;
+}
+.text-side.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Image Side */
+.image-side {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sectionImg {
+  width: 25rem;
+}
+.image-side-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sectionButtonEnroll {
+  align-self: flex-start;
+  padding: 1.2rem 4rem;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: rgb(194, 5, 5);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.sectionButtonEnroll:hover {
+  background: #c9c4c4;
+  color: rgb(194, 5, 5);
+  transform: scale(1.05);
+}
+/* ..................................... */
+
+/* Quality Section Grid */
+.quality-section {
+  position: relative;
+  height: 100vh; /* THIS IS TRY*/
+  /* background: #111; */
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  z-index: 1;
+}
+/* Cards Side */
+/* Cards Side - make them side by side */
+.cards-side {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  justify-content: center; /* center the grid content */
+  align-items: center;
+  place-items: center; /* also centers items inside cells */
+  padding: 0 7rem;
+  gap: 1rem;
+}
+/* Card */
+.quality-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+  width: 95%;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+  /* your entrance animations still apply via .top/.bottom/.left/.right and .show */
+}
+/* Hover overlay (renamed to avoid conflicts with hero .overlay) */
+.card-overlay {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  /* slide up from bottom */
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.55s ease, opacity 0.45s ease;
+  z-index: 1;
+}
+.qualityCourseInfo {
+  font-size: 1.2rem;
+}
+.qualityCourseTitle {
+  color: rgb(194, 5, 5);
+  font-size: 2rem;
+}
+/* Show overlay on hover */
+.quality-card:hover .card-overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+/* Optional: make background image subtly zoom under overlay on hover */
+.quality-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit; /* uses the card's background image */
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+  transform: scale(1);
+  transition: transform 0.55s ease;
+  z-index: 0; /* stays under overlay */
+}
+.quality-card:hover::before {
+  transform: scale(1.05);
+}
+.top,
+.right,
+.bottom,
+.hidden-right {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+/* Animate in when active */
+.top.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+.bottom.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hidden-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* Different starting positions */
+.right {
+  transform: translateX(80px);
+}
+.hidden-right {
+  transform: translateX(80px);
+}
+.top {
+  transform: translateY(-80px);
+}
+.bottom {
+  transform: translateY(80px);
+}
+/* Large Image Side */
+.qualityImgContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.qualitySectionHeading {
+  font-size: 3rem;
+  /* color: #fff; */
+  color: #000;
+  text-align: center;
+}
+.image-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.quality-img {
+  width: 80%;
+  height: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-40px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+.quality-img.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+.qualityText {
+  font-size: 1.6rem;
+  /* color: #fff; */
+  color: #000;
+  font-weight: 800;
+  word-spacing: 1px;
+  text-align: center;
+  font-style: italic;
+}
+.qualityFocus {
+  color: rgb(194, 5, 5);
+  font-size: 1.8;
+  font-weight: 900;
+}
+/* ..................................... */
+
+/* State Section Grid */
+
+.stats-section {
+  width: 100%;
+  height: 100%;
+  padding: 80px 20px;
+  /* background: #f8f9fa; */
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.stateHeadingDiv {
+  margin: 3rem 0;
+}
+.stateHeading {
+  font-size: 5rem;
+  color: #444;
+  text-align: center;
+}
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.stats-card {
+  background: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.stats-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.stats-number {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin: 10px 0;
+}
+
+.stats-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.stats-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+}
+.partnersDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.partners {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: #fff;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.partner-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+.partnerImg {
+  width: 10rem;
+  height: 10rem;
+}
+/* Responsive */
+@media (max-width: 992px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* REVIEW SECTION */
+.slider {
+  height: 85vh; /* THIS IS TRY*/
+  background: #111;
+  overflow: hidden;
+  position: relative;
+  padding: 7rem;
+}
+.reviewHeading {
+  font-size: 5rem;
+  color: #fff;
+  text-align: center;
+}
+
+.slidesWrapper {
+  display: flex;
+  transition: transform 1s ease-in-out; /* smooth slide */
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  min-width: 50%; /* show 2 slides at a time */
+  height: 100%;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.slideNameHeading {
+  font-size: 2.5rem;
+  color: #fff;
+}
+
+.rating {
+  color: #ff9800;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.message {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
