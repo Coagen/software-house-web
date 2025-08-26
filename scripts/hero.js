@@ -100,3 +100,13 @@ function moveSlider() {
 
 // auto-slide every 6s
 setInterval(moveSlider, 6000);
+// ///////////////////////////////////////////////////////
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Subscribe button animation
+document
+  .querySelector(".newsletter-btn")
+  .addEventListener("click", function () {
+    this.textContent = "Subscribed ✔";
+    setTimeout(() => (this.textContent = "Subscribe →"), 2000);
+  });
