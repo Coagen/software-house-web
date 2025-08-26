@@ -1,3 +1,13 @@
+//navbar
+const hamburger = document.getElementById("hamburger");
+const menuList = document.getElementById("menuList");
+// Toggle hamburger menu
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  menuList.classList.toggle("active");
+});
+//navbar
+
 const eventsWrapper = document.getElementById("eventsWrapper");
 const eventSlides = document.querySelectorAll(".event-slide");
 let eventIndex = 0;

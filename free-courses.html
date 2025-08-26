@@ -8,24 +8,34 @@
     <!-- same CSS file -->
   </head>
   <body>
-    <!-- Navbar (reuse from index.html) -->
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
       <a href="index.html">
-        <img class="logo" src="./public/logo.png" alt="" />
+        <img class="logo" src="./public/logo.png" alt="Logo" />
       </a>
-      <ul class="menuList">
+
+      <!-- Hamburger Icon -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="menuList" id="menuList">
         <li class="menuItem">
           <a class="menuLink" href="free-courses.html">Free Courses</a>
         </li>
         <li class="menuItem">
           <a class="menuLink" href="paid.html">Paid Courses</a>
         </li>
-        <li class="menuItem"><a class="menuLink" href="#">Gallery</a></li>
+        <li class="menuItem">
+          <a class="menuLink" href="gallery.html">Gallery</a>
+        </li>
         <li class="menuItem"><a class="menuLink" href="#">Contact</a></li>
       </ul>
     </nav>
     <!-- Hero Section -->
+
     <section class="events-slider">
       <h2 class="eventHeading">
         Upcoming <span class="eventHeadingFocus">Events</span>
@@ -80,6 +90,7 @@
         </div>
       </div>
     </section>
+
     <!-- Free Courses Section -->
     <section class="courses-section">
       <h2 class="eventHeading">

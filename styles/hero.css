@@ -171,7 +171,7 @@ body {
   -webkit-backdrop-filter: blur(10px);
 }
 .logo {
-  width: 90px;
+  width: 150px;
   height: auto;
 }
 .menuList {
@@ -255,6 +255,7 @@ body {
   padding: 4rem 2rem;
   gap: 3rem;
   margin-top: 100vh; /* pushes below hero */
+  overflow: hidden;
 }
 
 /* Text Side */
