@@ -114,50 +114,50 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // ////////////////////////////////////////////////////////////
 // will comment
-// document.addEventListener("DOMContentLoaded", () => {
-//   const statCards = document.querySelectorAll(".stats-card");
-//   const statNumbers = document.querySelectorAll(".stats-number");
+document.addEventListener("DOMContentLoaded", () => {
+  const statCards = document.querySelectorAll(".stats-card");
+  const statNumbers = document.querySelectorAll(".stats-number");
 
-//   const animateValue = (el, start, end, duration) => {
-//     let startTime = null;
+  const animateValue = (el, start, end, duration) => {
+    let startTime = null;
 
-//     const step = (timestamp) => {
-//       if (!startTime) startTime = timestamp;
-//       const progress = Math.min((timestamp - startTime) / duration, 1);
-//       const value = Math.floor(progress * (end - start) + start);
-//       el.textContent = value + (el.dataset.suffix || ""); // keep suffix like "+"
-//       if (progress < 1) requestAnimationFrame(step);
-//     };
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const value = Math.floor(progress * (end - start) + start);
+      el.textContent = value + (el.dataset.suffix || ""); // keep suffix like "+"
+      if (progress < 1) requestAnimationFrame(step);
+    };
 
-//     requestAnimationFrame(step);
-//   };
+    requestAnimationFrame(step);
+  };
 
-//   const observer = new IntersectionObserver(
-//     (entries) => {
-//       entries.forEach((entry) => {
-//         if (entry.isIntersecting) {
-//           entry.target.classList.add("show");
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
 
-//           // Animate number count-up
-//           const numberEl = entry.target.querySelector(".stats-number");
-//           if (numberEl && !numberEl.dataset.animated) {
-//             const raw = numberEl.textContent.trim();
-//             const endValue = parseInt(raw.replace(/\D/g, "")); // extract digits
-//             const suffix = raw.replace(/[0-9]/g, ""); // keep suffix like "+"
-//             numberEl.dataset.suffix = suffix;
-//             numberEl.dataset.animated = "true";
-//             animateValue(numberEl, 0, endValue, 1500);
-//           }
+          // Animate number count-up
+          const numberEl = entry.target.querySelector(".stats-number");
+          if (numberEl && !numberEl.dataset.animated) {
+            const raw = numberEl.textContent.trim();
+            const endValue = parseInt(raw.replace(/\D/g, "")); // extract digits
+            const suffix = raw.replace(/[0-9]/g, ""); // keep suffix like "+"
+            numberEl.dataset.suffix = suffix;
+            numberEl.dataset.animated = "true";
+            animateValue(numberEl, 0, endValue, 1500);
+          }
 
-//           observer.unobserve(entry.target); // prevent re-trigger
-//         }
-//       });
-//     },
-//     { threshold: 0.3 }
-//   );
+          observer.unobserve(entry.target); // prevent re-trigger
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
 
-//   statCards.forEach((card) => observer.observe(card));
-// });
+  statCards.forEach((card) => observer.observe(card));
+});
 //PARTNER ///////////////////////////////////////////////////////////
 // document.addEventListener("DOMContentLoaded", () => {
 //   const partnerCards = document.querySelectorAll(".partner-card");

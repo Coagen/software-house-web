@@ -9,13 +9,6 @@ html {
 body {
   font-family: Arial, sans-serif;
 }
-body.fade-out {
-  background-color: #000;
-  opacity: 0;
-  transition: opacity 0.6s ease;
-}
-/* .....................................Global Style.................................. */
-
 /* Navbar */
 .navbar {
   position: fixed;
@@ -50,6 +43,10 @@ body.fade-out {
   position: relative;
   transition: 0.3s;
 }
+
+.menuLink:hover {
+  color: rgba(194, 5, 5, 0.6);
+}
 .menuLink::after {
   content: "";
   position: absolute;
@@ -60,15 +57,15 @@ body.fade-out {
   background: rgb(194, 5, 5);
   transition: width 0.3s ease-in-out;
 }
+
 .menuLink:hover::after {
   width: 100%;
 }
+
 .menuLink.active::after {
   width: 100%; /* stays active */
 }
-.menuLink:hover {
-  color: rgba(194, 5, 5, 0.6);
-}
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -119,119 +116,25 @@ body.fade-out {
     display: flex;
   }
 }
-
-/* CONTACT US SECTION */
-/* Contact Us */
-.contact-section {
+/*Section Detail  */
+.detail-section {
+  padding: 6rem 2rem;
+  background: #fff;
   margin-top: 15rem;
-  padding: 50px 20px;
-  /* background: #000; */
 }
 
-.contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  align-items: center;
-}
-.contactHeading {
-  font-size: 5rem;
+.detailHeading {
+  font-size: 3rem;
   color: #000;
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
-.contactHeadingFocus {
-  font-size: 5rem;
+.detailHeadingFocus {
+  font-size: 4rem;
   color: rgb(194, 5, 5);
 }
-.sub-heading {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 20px;
-}
-.infoDiv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.info-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  font-size: 16px;
-  color: #444;
-}
-
-.info-item i {
-  margin-right: 10px;
-  color: #0077cc;
-}
-
-.info-item a {
-  color: #0077cc;
-  text-decoration: none;
-}
-
-.info-item a:hover {
-  text-decoration: underline;
-}
-
-.contact-image {
-  margin-top: 30px;
-  height: 200px;
-  border-radius: 10px;
-  background: url("./../public/cyber\ security.jpeg") center/cover no-repeat;
-}
-
-/* Right Side Form */
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-form input,
-.contact-form textarea {
-  margin-bottom: 15px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-.contact-form button {
-  padding: 14px;
-  border: none;
-  background: #0077cc;
-  color: #fff;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-  background: #005fa3;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .contact-container {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-image {
-    height: 150px;
-  }
-}
-
-/* Contact Us */
-/* CONTACT US SECTION */
-
-/* Footer */
+/*  */
+/* FOOTER */
 .footer {
   background: #fff;
   width: 100%;
