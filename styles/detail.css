@@ -201,6 +201,27 @@ body {
   background: #f9f9f9;
 }
 
+.back-btn-container {
+  text-align: start;
+  margin-top: 2rem;
+}
+
+.back-btn {
+  padding: 1.2rem 4rem;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: rgb(5, 5, 61);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.back-btn:hover {
+  color: rgb(5, 5, 61);
+  background: #c9c4c4;
+  transform: scale(1.05);
+}
 /* Responsive */
 @media (max-width: 768px) {
   .detailHeading {
