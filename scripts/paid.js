@@ -8,6 +8,16 @@ hamburger.addEventListener("click", () => {
 });
 //navbar
 
+// Active Link UnderLine Start
+const menuLinks = document.querySelectorAll(".menuLink");
+const currentPath = window.location.pathname;
+menuLinks.forEach((link) => {
+  if (link.getAttribute("href") === currentPath.split("/").pop()) {
+    link.classList.add("active");
+  }
+});
+// Active Link UnderLine End
+
 const eventsWrapper = document.getElementById("eventsWrapper");
 const eventSlides = document.querySelectorAll(".event-slide");
 let eventIndex = 0;

@@ -37,12 +37,33 @@ body {
 }
 .menuLink {
   font-size: 1.4rem;
+  font-weight: 600;
   color: rgb(194, 5, 5);
   text-decoration: none;
+  position: relative;
   transition: 0.3s;
 }
+
 .menuLink:hover {
   color: rgba(194, 5, 5, 0.6);
+}
+.menuLink::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* space under text */
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: rgb(194, 5, 5);
+  transition: width 0.3s ease-in-out;
+}
+
+.menuLink:hover::after {
+  width: 100%;
+}
+
+.menuLink.active::after {
+  width: 100%; /* stays active */
 }
 
 /* Hamburger */

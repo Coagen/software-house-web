@@ -1,3 +1,22 @@
+//Body on Click
+document.querySelectorAll("button[data-target]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const target = button.getAttribute("data-target");
+
+    // add fade-out class
+    document.body.classList.add("fade-out");
+
+    // wait for animation then redirect
+    setTimeout(() => {
+      window.location.href = target;
+    }, 600); // match transition time
+  });
+});
+
+// ensure body fades in when page loads
+window.addEventListener("pageshow", () => {
+  document.body.classList.remove("fade-out");
+});
 //navbar on scroll
 const navbar = document.getElementById("navbar");
 const hamburger = document.getElementById("hamburger");
@@ -17,6 +36,16 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   menuList.classList.toggle("active");
 });
+
+// // Active Link UnderLine Start
+// const menuLinks = document.querySelectorAll(".menuLink");
+// menuLinks.forEach((link) => {
+//   link.addEventListener("click", () => {
+//     menuLinks.forEach((l) => l.classList.remove("active")); // remove old active
+//     link.classList.add("active"); // set new active
+//   });
+// });
+// // Active Link UnderLine End
 
 // ................................................
 // Intersection Observer for text + image animations
