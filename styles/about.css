@@ -257,7 +257,7 @@ body.fade-out {
 }
 
 .footer-links a:hover {
-  color: #00bcd4;
+  color: rgba(194, 5, 5, 0.6);
 }
 
 .footer-text-small {
