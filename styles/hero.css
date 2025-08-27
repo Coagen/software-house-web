@@ -59,7 +59,7 @@ body.fade-out {
 .heroButtonDiv {
   display: flex;
   align-items: center;
-  justify-content: center;
+  align-self: flex-start;
   gap: 2rem;
 }
 .heroButtonConnect {
@@ -93,7 +93,6 @@ body.fade-out {
   transform: scale(1.05);
 }
 /* ✅ RESPONSIVE STYLING */
-
 /* Tablets */
 @media (max-width: 992px) {
   .overlay {
@@ -528,7 +527,6 @@ body.fade-out {
 }
 .qualityText {
   font-size: 1.6rem;
-  /* color: #fff; */
   color: #000;
   font-weight: 800;
   word-spacing: 1px;
@@ -583,10 +581,15 @@ body.fade-out {
   margin: 3rem 0;
 }
 .stateHeading {
-  font-size: 5rem;
-  color: #444;
+  font-size: 3rem;
+  color: #000;
   text-align: center;
 }
+.stateHeadingFocus {
+  font-size: 4rem;
+  color: rgb(194, 5, 5);
+}
+
 .stats-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -653,10 +656,13 @@ body.fade-out {
 }
 
 .partnerHeading {
-  font-size: 3rem; /* smaller on small screens */
-  color: #444;
+  font-size: 3rem;
+  color: #000;
   text-align: center;
-  margin-bottom: 2rem;
+}
+.partnerHeadingFocus {
+  font-size: 4rem;
+  color: rgb(194, 5, 5);
 }
 
 .partners {
@@ -815,6 +821,10 @@ body.fade-out {
   color: #000;
   padding: 4rem 2rem 0;
   font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .footer-container {

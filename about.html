@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paid Courses | Tech Hub Innovation</title>
-    <link rel="stylesheet" href="./styles/paid.css" />
+    <title>About Us | Tech Hub Innovation</title>
+    <link rel="stylesheet" href="./styles/about.css" />
+    <!-- same CSS file -->
   </head>
   <body>
     <!-- Navbar -->
@@ -35,159 +36,48 @@
         </li>
       </ul>
     </nav>
-    <!-- Hero Section -->
-    <section class="events-slider">
-      <h2 class="paidHeading">
-        Upcoming <span class="paidHeadingFocus">Courses</span>
-      </h2>
-      <div class="eventsWrapper" id="eventsWrapper">
-        <!-- Event 1 -->
-        <div class="event-slide">
-          <div class="event-image">
-            <img src="./public/course1.png" alt="Tech Conference" />
-          </div>
-          <div class="event-details">
-            <h3 class="event-title">Tech Innovation Conference 2025</h3>
-            <p class="event-date">📅 March 10, 2025</p>
-            <p class="event-location">📍 Islamabad, Pakistan</p>
-            <p class="event-desc">
-              Join industry leaders to explore the future of technology,
-              innovation, and entrepreneurship.
-            </p>
-          </div>
-        </div>
 
-        <!-- Event 2 -->
-        <div class="event-slide">
-          <div class="event-image">
-            <img src="./public//course2.png" alt="Coding Bootcamp" />
-          </div>
-          <div class="event-details">
-            <h3 class="event-title">Full-Stack Coding Bootcamp</h3>
-            <p class="event-date">📅 April 5, 2025</p>
-            <p class="event-location">📍 Online</p>
-            <p class="event-desc">
-              Hands-on training with MERN stack, guided by professional
-              developers.
+    <!-- About  Us Section -->
+    <section class="about-section">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Left Content -->
+          <div class="about-content">
+            <h2 class="aboutHeading">
+              About Tech Hub <span class="aboutHeadingFocus"> Institute </span>
+            </h2>
+            <p>
+              Tech Hub Institute is more than just a place of learning; it's a
+              thriving ecosystem where technology meets creativity. Our
+              state-of-the-art facilities, experienced faculty, and a wide
+              network of industry professionals ensure that our students receive
+              the best education and opportunities. Whether you are a beginner
+              or an advanced learner, we have something for everyone. Come and
+              be a part of the future with Tech Hub Institute.
             </p>
+            <p>
+              We offer a range of programs in software development, data
+              science, artificial intelligence, cybersecurity, and more. Our
+              alumni have gone on to work for leading tech companies, and many
+              have started their own successful ventures. Join us and be
+              inspired to innovate and excel in the tech world.
+            </p>
+            <button class="heroButtonExplore" data-target="free-courses.html">
+              Explore Our Programs
+            </button>
           </div>
-        </div>
 
-        <!-- Event 3 -->
-        <div class="event-slide">
-          <div class="event-image">
-            <img src="./public/course3.png" alt="Cybersecurity Seminar" />
-          </div>
-          <div class="event-details">
-            <h3 class="event-title">Cybersecurity Awareness Seminar</h3>
-            <p class="event-date">📅 May 15, 2025</p>
-            <p class="event-location">📍 Lahore, Pakistan</p>
-            <p class="event-desc">
-              Learn about modern security threats and best practices to protect
-              digital businesses.
-            </p>
+          <!-- Right Image -->
+          <div class="about-image">
+            <img src="./public/techhub.jpg" alt="Tech Hub Institute" />
           </div>
         </div>
       </div>
     </section>
-    <!-- Free Courses Section -->
-    <section class="courses-section">
-      <h2 class="paidHeading">
-        Our <span class="paidHeadingFocus">Paid Courses</span>
-      </h2>
 
-      <div class="courses-container">
-        <!-- Card 1 -->
-        <div class="course-card hidden">
-          <img src="./public/web.avif" alt="Course 1" />
-          <div class="course-content">
-            <div class="course-rating">⭐⭐⭐⭐☆ (4.5)</div>
-            <div>
-              <h3 class="course-title">Web Development Basics</h3>
-              <p class="course-desc">
-                Learn the fundamentals of HTML, CSS, and JavaScript to start
-                your journey.
-              </p>
-            </div>
-          </div>
-        </div>
+    <!-- About  Us Section -->
 
-        <!-- Card 2 -->
-        <div class="course-card hidden">
-          <img src="./public/js.avif" alt="Course 2" />
-          <div class="course-content">
-            <div class="course-rating">⭐⭐⭐⭐⭐ (5.0)</div>
-            <div>
-              <h3 class="course-title">MERN Stack Crash Course</h3>
-              <p class="course-desc">
-                Dive into MongoDB, Express, React, and Node.js to build
-                full-stack apps.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="course-card hidden">
-          <img src="./public/cld.jpeg" alt="Course 3" />
-          <div class="course-content">
-            <div class="course-rating">⭐⭐⭐⭐ (4.0)</div>
-            <div>
-              <h3 class="course-title">Cloud Computing Essentials</h3>
-              <p class="course-desc">
-                Get started with cloud concepts, deployment models, and AWS
-                basics.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="course-card hidden">
-          <img src="./public/cyber security111.avif" alt="Course 4" />
-          <div class="course-content">
-            <div class="course-rating">⭐⭐⭐⭐☆ (4.2)</div>
-            <div>
-              <h3 class="course-title">Cybersecurity Foundations</h3>
-              <p class="course-desc">
-                Understand threats, protection methods, and cyber safety
-                fundamentals.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Card 5 -->
-        <div class="course-card hidden">
-          <img src="./public/aws.jpeg" alt="Course 4" />
-          <div class="course-content">
-            <div class="course-rating">⭐⭐⭐⭐☆ (4.2)</div>
-            <div>
-              <h3 class="course-title">Cybersecurity Foundations</h3>
-              <p class="course-desc">
-                Understand threats, protection methods, and cyber safety
-                fundamentals.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- Card 6 -->
-        <div class="course-card hidden">
-          <img src="./public/aws.jpeg" alt="Course 4" />
-          <div class="course-content">
-            <div class="course-rating">⭐⭐⭐⭐☆ (4.2)</div>
-            <div>
-              <h3 class="course-title">Cybersecurity Foundations</h3>
-              <p class="course-desc">
-                Understand threats, protection methods, and cyber safety
-                fundamentals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- Footer Section -->
-
     <footer class="footer">
       <div class="footer-container">
         <!-- Company Info -->
@@ -205,13 +95,13 @@
         <div class="footer-col">
           <h3 class="footer-heading">Quick Links</h3>
           <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="/services">Services</a></li>
             <li><a href="free-courses.html">Free Courses</a></li>
             <li><a href="paid-courses.html">Paid Courses</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/gallery.html">Gallery</a></li>
+            <li><a href="/contact.html">Contact</a></li>
           </ul>
         </div>
 
@@ -340,15 +230,9 @@
         <p>
           © <span id="year"></span> Tech Hub Faisalabad. All rights reserved.
         </p>
-        <!-- <p>
-          Special Thanks For The Footer To
-          <a href="#" target="_blank">Waseem</a>
-          &
-          <a href="#" target="_blank">Ali</a>
-        </p> -->
       </div>
     </footer>
 
-    <script src="./scripts/paid.js"></script>
+    <script src="./scripts/about.js"></script>
   </body>
 </html>
