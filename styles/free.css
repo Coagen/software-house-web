@@ -255,7 +255,6 @@ body {
   gap: 2rem;
   margin-top: 3rem;
 }
-
 .course-card {
   display: block; /* ensures the link behaves like a block card */
   text-decoration: none;
@@ -264,7 +263,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transform: translateY(50px);
-  transition: all 0.8s ease;
+  transition: transform 0.3s ease, opacity 0.8s ease; /* smoother hover + fade */
   opacity: 0;
   cursor: pointer;
 }
@@ -306,7 +305,10 @@ body {
   transform: translateY(0);
   opacity: 1;
 }
-
+.course-card.show:hover {
+  transform: translateY(-6px); /* move UP 6px from visible state */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
 /* FOOTER */
 .footer {
   background: #fff;
