@@ -5,7 +5,6 @@ document.querySelectorAll("button[data-target]").forEach((button) => {
 
     // add fade-out class
     document.body.classList.add("fade-out");
-
     // wait for animation then redirect
     setTimeout(() => {
       window.location.href = target;
@@ -23,14 +22,21 @@ const hamburger = document.getElementById("hamburger");
 const menuList = document.getElementById("menuList");
 
 // Show navbar on scroll
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY > window.innerHeight / 6) {
+//     navbar.style.top = "0";
+//   } else {
+//     navbar.style.top = "-150px";
+//   }
+// });
 window.addEventListener("scroll", () => {
-  if (window.scrollY > window.innerHeight / 3) {
-    navbar.style.top = "0";
+  if (window.scrollY > 0) {
+    // user has scrolled even a little
+    navbar.style.top = "0"; // show navbar
   } else {
-    navbar.style.top = "-150px";
+    navbar.style.top = "-150px"; // hide navbar when back at very top
   }
 });
-
 // Toggle hamburger menu
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
